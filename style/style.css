@@ -1,3 +1,49 @@
-.main {
-  background-color: #203233;
+.page {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #000000;
+  background-color: #fffdf8;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+.module-list {
+  margin: 0;
+  padding: 20px;
+  list-style-type: none;
+  border: 1px dotted #000000;
+}
+
+.module-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.module-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.module-link:hover {
+  color: #ffd874;
+}
+
+.module-item::after {
+  position: absolute;
+  top: 8px;
+  left: -14px;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #f5d581;
+  transform: rotate(45deg);
 }
