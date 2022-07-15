@@ -10,40 +10,120 @@
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 60px;
+  padding: 0 60px;
 }
 
-.module-list {
-  margin: 0;
-  padding: 20px;
+.wysiwyg-wrapper * {
+  margin-top: 0;
+}
+
+.wysiwyg-wrapper h1 {
+  margin-bottom: 32px;
+  font-size: 48px;
+  line-height: 1.22;
+}
+
+.wysiwyg-wrapper h2 {
+  margin-bottom: 56px;
+  font-size: 40px;
+  line-height: 1.22;
+  font-weight: 500;
+  color: #9f7303;
+}
+
+.wysiwyg-wrapper h3 {
+  margin-bottom: 34px;
+  font-size: 32px;
+  line-height: 1.22;
+  font-weight: 500;
+  color: #9f7303;
+}
+
+.wysiwyg-wrapper ul,
+.wysiwyg-wrapper ol {
+  margin-bottom: 56px;
+  padding-left: 32px;
   list-style-type: none;
-  border: 1px dotted #000000;
 }
 
-.module-item {
+.wysiwyg-wrapper li {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
-.module-link {
-  text-decoration: none;
-  color: #000000;
-}
-
-.module-link:hover {
-  color: #ffd874;
-}
-
-.module-item::after {
+.wysiwyg-wrapper li::after {
   position: absolute;
   top: 8px;
-  left: -14px;
+  left: -20px;
   content: "";
   display: block;
   width: 8px;
   height: 8px;
   background-color: #f5d581;
   transform: rotate(45deg);
+}
+
+.wysiwyg-wrapper blockquote {
+  width: 70%;
+  margin: 60px auto;
+  padding: 40px 100px;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 300;
+  text-align: center;
+  color: #9f7303;
+  border-top: 1px solid #f5d581;
+  border-bottom: 1px solid #f5d581;
+}
+
+.review {
+  margin: 30px auto;
+  padding: 0;
+  list-style: none;
+}
+
+.review__item {
+  display: grid;
+  grid-template-areas:
+    "r-avatar r-author"
+    "r-avatar r-text  ";
+  grid-template-columns: 50px 1fr;
+  column-gap: 24px;
+  row-gap: 8px;
+}
+
+.review__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.review__image-wrapper {
+  grid-area: r-avatar;
+  width: 50px;
+  height: 50px;
+  background-color: #f9de9c;
+  border-radius: 50%;
+}
+
+.review__avatar {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review__author {
+  grid-area: r-author;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-style: 500;
+}
+
+.review__text {
+  grid-area: r-text;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
 }
